@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Black+Ops+One&family=Orbitron:wght@600&family=Saira+Condensed:wght@400;500&family=Satisfy&display=swap" rel="stylesheet">
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;800&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta charset="UTF-8">
+    <title>Fitness Phy</title>
+    <style>
+        body{
+            background: #faf0e6
+        }
+        h1{
+            font-size:76px;
+            font-family:Raleway, ExtraBold;
+            text-align: center;
+            color: #ffffff;
+
+        }
+        h3{
+            font-size: 76px;
+            font-family:Raleway, Medium;
+            text-align: center;
+            color: #000000;
+        }
+        p{
+            font-size: 24px;
+            font-family:Raleway, Regular;
+            color: #000000
+        }
+        button{
+            font-size: 15px;
+            background: #6a7d8e;
+            position: relitive;
+
+        }
+        .circle{
+            width: 700px;
+            height:700px;
+            background: #6a7d8e;
+            margin:10% auto;
+            border-radius: 50%;
+            text-aling:center;
+            position: relative;
+            border: 10px solid #ffffff;
+        }
+
+        .content{
+            width: inherit;
+            height: auto;
+            top: 50%;
+            transform: translateY(120%);
+        }
+        label{
+            color:#000000;
+            font-size: 20px;
+            font-family: Raleway, Medium;
+        }
+        input{
+            Margin = 30px;
+
+        }
+    </style>
+    <meta charset="UTF-8">
+    <title>diagnostic</title>
+</head>
+<body>
+    <button style='font-family:Satisfy' > <a href="http://127.0.0.1:6400/">
+       <b> Fitness Phy</b>
+    </a>
+    </button>
+
+    <div class="circle">
+           <h1 style="font-family:Raleway, ExtraBold; font-size: 120px;">
+                <div class="content">
+                    Diagnostic
+
+                </div>
+            </h1>
+    </div>
+    <button style="font-size: 76px;
+            font-family:Anton;
+            text-align: center;
+            color: #ffffff;
+            display: block;
+            margin: auto;">Get Your Workout Here </button>
+    <form style="text-align: center" name="Workout" action="" method="get">
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+            <label for="Name">Name:</label>
+    <input name="Name" placeholder="EX: John Doe" required id="Name"><br>
+    <label>Age:</label>
+    <input name="Age" placeholder="EX: 12 years old" required><br>
+    <label>Height:</label>
+    <input name="Height" placeholder="EX: 55 in" required><br>
+    <label>Weight:</label>
+    <input name="Weight" placeholder="EX: 70 lbs" required><br>
+    <label>What level are you</label>
+    <input name="Level" placeholder="EX: Beginner " required><br>
+
+
+    <button id="Aarush" onclick="saveAndDisplay(); showText();">Finish</button>
+    <p id="displayArea" ></p>
+
+
+<script>
+    function saveAndDisplay() {
+        var inputValue = document.getElementById("Name").value;
+        localStorage.setItem("savedInfo", inputValue);
+        displaySavedInfo().then(showText);
+    }
+
+    function displaySavedInfo() {
+        return new Promise(function(resolve) {
+            var savedInfo = localStorage.getItem("savedInfo");
+            var displayArea = document.getElementById("displayArea");
+            if (savedInfo) {
+                displayArea.textContent = "Hello " + savedInfo + " scroll down for the final question to find out what workout you should do. Just click your option and it should generate";
+            } else {
+                displayArea.textContent = "No saved information.";
+            }
+            resolve();  // Resolve the promise after updating content
+        });
+    }
+
+    function ShowText() {
+        var selectedValue = document.querySelector('input[name="title"]:checked');
+        var displayText = "";
+        var NewText1 = "";
+        var NewText2 = "";
+        var NewText3 = "";
+        var NewText4 = "";
+        var NewText5 = "";
+        var NewText6 = "";
+        var NewText7 = "";
+        var NewText8 = "";
+        var NewText9 = "";
+        var NewText10= "";
+        var NewText11= "";
+        var NewText12= "";
+        var NewText13= "";
+        var NewText14= "";
+        var NewText15= "";
+        var NewText16= "";
+        var NewText17= "";
+        var NewText18= "";
+        var NewText19= "";
+        var NewText20= "";
+        var NewText21= "";
+        var NewText22= "";
+        var NewText23= "";
+        if (selectedValue) {
+            switch (selectedValue.value) {
+                case "OptionA":
+                    displayText = ("Warm Up for 5 minutes")
+                    NewText1 = ("   -  Start with a 5-minute Brisk walk or light jog to increase your heart rate and warm up your muscles.")
+                    NewText2 = ("Workout: 20 minutes")
+                    NewText3 = ("   -   Arm circles: 2 sets of 10 repetitions in each direction (2 minutes) ")
+                    NewText4 = ("  -   Forward fold: Hold for 30 seconds, repeat 3 times (3 minutes)")
+                    NewText5 = (" -   Cat-Cow stretch: 2 sets of 10 repetitions (2 minutes)")
+                    NewText6 = ("-   Warrior 1 pose: Hold for 30 seconds on each side (3 minutes)")
+                    NewText7 = ("-   Downward facing dog: Hold for 1 minute, repeat 2 times (4 minutes)")
+                    NewText8 = ("-   Pigeon pose: Hold for 30 seconds on each side (3 minutes)")
+                    NewText9 = ("-   Seated forward bend: Hold for 30 seconds, repeat 3 times (3 minutes))")
+                    NewText10 = ("-   Cooldown: 5 minutes)")
+                    NewText11 = ("-   Brisk walk (5 minutes)")
+                    break;
+                case "OptionB":
+                    displayText = ("Warm Up for 5 minutes")
+                    NewText1 = ("   -  Jog in place for 2 minutes.")
+                    NewText14 = ("-   Arm circles for 1 minute.")
+                    NewText15 = ("-   Leg swings for 1 minute.")
+                    NewText16 = ("-   Jumping jacks for 1 minute.")
+                    NewText2 = ("Workout: 20 minutes")
+                    NewText17=("Circuit 1: Repeat 3 times (No breaks in the middle)")
+                    NewText3 = ("   -   20 Bodyweight squats. ")
+                    NewText4 = ("  -   15 Push-ups.")
+                    NewText5 = (" -   30 seconds Plank.")
+                    NewText18= ("-   Circuit 2: Repeat 3 times (No break in the middle)")
+                    NewText6 = ("-   10 Burpees.")
+                    NewText7 = ("-   20 Mountain climbers.")
+                    NewText8 = ("-   10 Lunges on each leg.")
+                    NewText10 = ("-   Cooldown: 5 minutes)")
+                    NewText11 = ("-   Walking lunges for 2 minutes.")
+                    NewText19 = ("-   Shoulder stretches for 1 minute.")
+                    NewText20 = ("-   Hamstring stretch for 1 minute.")
+                    NewText21 = ("-   Deep breathing for 1 minute.")
+                    break;
+                case "OptionC":
+                    displayText = ("Warm Up for 5 minutes")
+                    NewText1 = ("   -  Arm Circles: 1 minute")
+                    NewText14 = ("-   Leg Swings: 1 minute.")
+                    NewText15 = ("-   Side Bends: 1 minute.")
+                    NewText16 = ("-   High Knees: 2 minutes.")
+                    NewText2 = ("Workout: 20 minutes")
+                    NewText3 = ("   -   Plank: 3 minutes. ")
+                    NewText4 = ("  -   Single-Leg Deadlifts: 4 minutes.")
+                    NewText5 = (" -   Bird Dogs: 3 minutes.")
+                    NewText6 = ("-   Stability Ball Rollouts: 4 minutes.")
+                    NewText7 = ("-   Russian Twists: 3 minutes.")
+                    NewText8 = ("-   Side Plank: 3 minutes.")
+                    NewText10 = ("-   Cooldown: 5 minutes)")
+                    NewText11 = ("-   Walking lunges for 2 minutes.")
+                    NewText19 = ("-   Standing Quadriceps Stretch: 1 minute.")
+                    NewText20 = ("-   Shoulder Stretch: 1 minute.")
+                    NewText21 = ("-   Deep breathing for 1 minute.")
+                    break;
+                case "OptionD":
+                    displayText = ("Warm Up for 5 minutes")
+                    NewText1 = ("   -   Jumping Jacks: 2 minute")
+                    NewText14 = ("-   Arm Circles: 1 minute (30 seconds forward, 30 seconds backward)")
+                    NewText15 = ("-   Leg Swings: 1 minute (30 seconds each leg)")
+                    NewText16 = ("-   High Knees: 1 minute")
+
+                    NewText2 = ("Workout: 20 minutes")
+                    NewText3 = ("   -    Agility Ladder Drills: 5 minutes")
+                    NewText4 = ("  -  Plyometric Jumps: 5 minutes ")
+                    NewText5 = (" -   Cone Drills: 5 minutes")
+                    NewText6 = ("-    Shuttle Runs: 5 minutes")
+                    NewText10 = ("   Cooldown: 5 minutes)")
+                    NewText11 = ("-   Slow Jog or Walk: 2 minutes")
+                    NewText19 = ("-   Standing Quad Stretch: 1 minute (30 seconds each leg)")
+                    NewText20 = ("-   Forward Fold: 1 minute")
+                    NewText21 = ("-    Shoulder Stretch: 1 minute")
+                    break;
+                case "OptionE":
+                     displayText = ("Warm Up for 5 minutes")
+                    NewText1 = ("   -   Jog in place")
+                    NewText2 = ("Workout: 20 minutes")
+                    NewText3 = ("   -    Barbell Squats: 4 sets of 8-10 reps")
+                    NewText4 = ("  -  Deadlifts: 4 sets of 8-10 reps ")
+                    NewText5 = (" -   Bench Press: 4 sets of 8-10 reps")
+                    NewText6 = ("-    Pull-ups or Lat Pulldowns: 3 sets of 8-10 reps")
+                    NewText10 = ("   Cooldown: 5 minutes)")
+                    NewText11 = ("-   Slow Walking")
+                    break;
+                default:
+                    break;
+            }
+        }
+        document.getElementById("displayText" ).textContent = displayText;
+        document.getElementById("NewText1" ).textContent = NewText1;
+        document.getElementById("NewText2" ).textContent = NewText2;
+        document.getElementById("NewText3" ).textContent = NewText3;
+        document.getElementById("NewText4" ).textContent = NewText4;
+        document.getElementById("NewText5" ).textContent = NewText5;
+        document.getElementById("NewText6" ).textContent = NewText6;
+        document.getElementById("NewText7" ).textContent = NewText7;
+        document.getElementById("NewText8" ).textContent = NewText8;
+        document.getElementById("NewText9" ).textContent = NewText9;
+        document.getElementById("NewText10" ).textContent = NewText10;
+        document.getElementById("NewText11" ).textContent = NewText11;
+        document.getElementById("NewText12" ).textContent = NewText12;
+        document.getElementById("NewText13" ).textContent = NewText13;
+        document.getElementById("NewText14" ).textContent = NewText14;
+        document.getElementById("NewText15" ).textContent = NewText15;
+        document.getElementById("NewText16" ).textContent = NewText16;
+        document.getElementById("NewText17" ).textContent = NewText17;
+        document.getElementById("NewText18" ).textContent = NewText18;
+        document.getElementById("NewText19" ).textContent = NewText19;
+        document.getElementById("NewText20" ).textContent = NewText20;
+        document.getElementById("NewText21" ).textContent = NewText21;
+        document.getElementById("NewText22" ).textContent = NewText22;
+        document.getElementById("NewText23" ).textContent = NewText23;
+
+
+
+    }
+
+    displaySavedInfo();
+</script>
+    <br>
+    <div>
+        <input type="reset">
+    </div>
+
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+
+</form>
+<form style="text-align:center">
+    <div>
+        <br>
+        <label >What do you desire:</label>
+        <br>
+        <label for="A">Flexibility</label>
+        <input type="radio" id="A" name="title" value="OptionA" onchange="ShowText()"><br>
+        <label for="B">Weight loss</label>
+        <input type="radio" id="B" name="title" value="OptionB" onchange="ShowText()"><br>
+        <label for="C">Stability</label>
+        <input type="radio" id="C" name="title" value="OptionC" onchange="ShowText()"><br>
+        <label for="D">Agile</label>
+        <input type="radio" id="D" name="title" value="OptionD" onchange="ShowText()"><br>
+        <label for="E">Gaining Muscle</label>
+        <input type="radio" id="E" name="title" value="OptionE" onchange="ShowText()"><br>
+        <label for="F">Improve Endurance</label>
+        <input type="radio" id="F" name="title" value="OptionF" onchange="ShowText()"><br>
+    </div>
+
+</form>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <h3 id="displayText" ></h3>
+    <p id=""><a id="NewText1"> </a></p>
+    <p id="NewText14"></p>
+    <p id="NewText15"></p>
+    <p id="NewText16"></p>
+
+    <p id="NewText23">
+
+    </p>
+
+    <h3 id="NewText2"></h3>
+    <h2 id="NewText17" style="font-family=Raleway, Medium; font-size: 40px; color: #000000;"></h2>
+    <p id="NewText3"></p>
+    <p id="NewText4"></p>
+    <p id="NewText5"></p>
+    <h2 id="NewText18" style="font-family=Raleway, Medium; font-size: 40px; color: #000000;"></h2>
+    <p id="NewText6"></p>
+    <p id="NewText7"></p>
+    <p id="NewText8"></p>
+    <p id="NewText9"></p>
+    <h3 id="NewText10"></h3>
+    <p id="NewText11"></p>
+    <p id="NewText12"></p>
+    <p id="NewText13"></p>
+    <p id="NewText19"></p>
+    <p id="NewText20"></p>
+    <p id="NewText21"></p>
+
+
+
+
+
+
+
+
+    <button style="display: block;
+            margin: auto;"><a href="http://127.0.0.1:6400/quiz/learnWorkout">IF YOU DON'T UNDERSTAND ANY WORKOUT
+                                                                CLICK HERE</a></button>
+<br>
+<br>
+
+
+
+</body>
+</html>
